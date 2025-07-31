@@ -8,16 +8,13 @@
 
 <div class='hero-section relative bg-gray-800 text-white text-center flex flex-col justify-center items-center h-[600px] md:h-[650px] lg:h-[700px]'>
 
-    <span class='font-mono my-2 z-10'><span class='wave'>&#128075;</span> Hi, I am Rushikesh</span>
+    <span class='font-mono my-2 z-10 text-2xl md:text-5xl lg:text-4xl'><span class='wave'>&#128075;</span> Hi, I am Rushikesh</span><br>
     <h1 style="font-family: Poppins-Bold"
     class="z-10 text-3xl font-extrabold md:text-4xl lg:text-5xl leading-snug md:leading-tight px-4 md:px-10 lg:px-20 text-center fade-up">
     I'm a Cloud and DevOps
-    {% comment %} <span class="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent animate-gradient">
-        Cloud and DevOps
-    </span>  {% endcomment %}
     Engineer.<br>
     This is my Portfolio & Blog
-</h1>
+    </h1>
 
     <div class='hero-img z-10 my-4'>
         <img src="https://cdn.jsdelivr.net/gh/hostmind/host/static/h.png" class='h-auto w-52 md:w-56 lg:w-60 xl:w-64'>
@@ -25,10 +22,10 @@
 
     <div class='hero-btn z-10 my-3 md:mt-2 font-bold text-sm md:text-[16px] md:leading-6'>
         <ul class='flex flex-row gap-4 md:space-x-2'>
-            <a href='https://cdn.jsdelivr.net/gh/hostmind/host/static/Rushikesh-Resume.pdf' download>
+            <a href='https://drive.google.com/uc?export=download&id=1uKf3UIiKm9uiqt152wsKfxn9nGpOXj7g' download>
                 <div class='relative group'>
                     <div class='bg-gradient-to-r from-cyan-300 to-blue-600 px-6 py-2 text-white rounded-md -inset-0.5 absolute blur-sm opacity-75 group-hover:-inset-1 transition group-hover:duration-400 group-hover:opacity-90 duration-1000'></div>
-                    <button class='relative bg-gray-800 px-7 py-2 text-white rounded-md group-hover:text-gray-50 transition duration-200'><i class="bi bi-download font-extrabold"></i> Download CV</button>
+                    <button class='relative bg-gray-800 px-7 py-2 text-white rounded-md group-hover:text-gray-50 transition duration-200'><i class="bi bi-download font-extrabold"></i> Download My Latest Resume</button>
                 </div>
             </a>
             <a href='/about'>
@@ -40,18 +37,20 @@
         </ul>
     </div>
 </div>
-
+                {% comment %}  projects = Project.objects.all() {% endcomment %}
 <!-- Projects Section -->
 <section id="projects" class="bg-gray-900 text-white px-6 md:px-20 lg:px-32 xl:px-60 py-10">
     <h2 style="font-family: Poppins-Bold" class="text-3xl md:text-4xl font-extrabold text-center mb-10">My Projects</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {% for project in projects %}
-        <div class="bg-gray-800 p-5 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
-            <img src="{{ project.image_url }}" alt="{{ project.title }}" class="rounded-md mb-4">
-            <h3 class="text-xl font-bold mb-2">{{ project.title }}</h3>
-            <p class="mb-3">{{ project.description|truncatechars:100 }}</p>
-            <a href="{{ project.link }}" class="text-blue-300 hover:text-blue-500 underline">View Project</a>
-        </div>
+        <a href="/projects" class="block">
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <img src="{{ project.image_url }}" alt="{{ project.title }}" class="rounded-md mb-4">
+                <h3 class="text-xl font-bold mb-2">{{ project.title }}</h3>
+                <p class="mb-3">{{ project.description|truncatechars:100 }}</p>
+                <span class="text-blue-300 hover:text-blue-500 underline">View Project</span>
+            </div>
+        </a>
         {% empty %}
         <p class="col-span-full text-center">No projects available at the moment.</p>
         {% endfor %}

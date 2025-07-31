@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect, redirect, get_object_or_404
 from django.http import Http404
+# We only need the Blog model, so no 'Project' is imported.
 from home.models import Blog
 from django.contrib import messages
 from django.core.paginator import Paginator
@@ -10,9 +11,34 @@ import re
 
 # Create your views here.
 def index (request):
+    # --- Create Project Data Manually ---
+    # Since you don't use a database for projects, we define the data right here.
+    projects = [
+        {
+            'title': 'TexTrade - Online Textile Platform on AWS',
+            'description': 'A full-stack Online Textile Platform to help business (textile) owners manage their inventory and streamline customer orders.',
+            'image_url': 'https://i.ibb.co/tPwpY2VB/logo-textrade.png',
+            'link': 'https://github.com/rushikesh6251/TexTrade_Solapur',
+        },
+        {
+            'title': 'EasyDine - Restaurant Management System',
+            'description': 'An online food ordering and restaurant management system featuring menu management, order processing, and inventory control.',
+            'image_url': 'https://i.ibb.co/qY3FFQLz/logo-easydine.png',
+            'link': 'https://www.linkedin.com/in/rushikesh6251/',
+        }
+    ]
+
+    # --- Get Blog Posts (Your existing code) ---
     blogs = Blog.objects.all()
-    random_blogs = random.sample(list(blogs), 3)
-    context = {'random_blogs': random_blogs}
+    # To prevent errors if you have fewer than 3 blog posts
+    num_blogs_to_sample = min(len(blogs), 3)
+    random_blogs = random.sample(list(blogs), num_blogs_to_sample) if blogs else []
+
+    # --- Send all data to the template ---
+    context = {
+        'random_blogs': random_blogs,
+        'projects': projects,
+    }
     return render(request, 'index.html', context)
 
 def about (request):
@@ -55,6 +81,7 @@ def contact (request):
     return render(request, 'contact.html', {})
 
 def projects (request):
+    # This correctly renders your static projects page.
     return render(request, 'projects.html')
 
 def blog(request):
@@ -105,6 +132,6 @@ def blogpost (request, slug):
         return render(request, '404.html', context, status=404)
 
 # def blogpost (request, slug):
-#     blog = Blog.objects.filter(slug=slug).first()
-#     context = {'blog': blog}
-#     return render(request, 'blogpost.html', context)
+#     blog = Blog.objects.filter(slug=slug).first()
+#     context = {'blog': blog}
+#     return render(request, 'blogpost.html', context)
