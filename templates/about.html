@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+
+<div class='bg-gray-800 text-white p-3 md:px-10 lg:px-20 xl:px-40 2xl:px-72'>
+    <div class='m-6'>
+        <p style="font-family: Poppins-Bold" class='text-4xl font-extrabold py-5 text-center md:text-start'>About Me</p>
+        <p class='text-justify'>
+
+            👋 Hi there!<br><br>
+
+            <p>
+                I’m <strong>Rushikesh</strong>, a dedicated MCA student and aspiring <strong>DevOps Engineer</strong> with a solid foundation in Python, Cloud, and Automation. I'm currently building a portfolio of impactful tech projects while mastering tools like <strong>Jenkins, Docker, SonarQube, and Nexus</strong>.
+            </p><br>
+
+            <p>
+                My journey in tech began after my schooling in 2021. Since then, I’ve been obsessed with making things work smarter — whether it’s coding Python-based automation scripts, building full-stack applications with <strong>Django</strong>, or setting up complete CI/CD pipelines using <strong>Jenkins</strong>.
+            </p><br>
+
+            <p>
+                Some of my proudest works include a <strong>Textile platform</strong>, a  <strong>Food ordering website</strong> in PHP. Check out my <span class="group text-cyan-200">
+                <a href="/projects" class="bg-left-bottom bg-gradient-to-r from-cyan-300 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">projects here</a></span>.
+            </p><br>
+
+            <p>
+                I’m actively learning and implementing tools and practices around <strong>Cloud (AWS)</strong>, <strong>Infrastructure as Code</strong>, and <strong>Containerization</strong>. My goal? To become a highly capable DevOps and Cloud Engineer who not only automates but optimizes systems for scale and performance.
+            </p><br>
+
+            <p>
+                When I’m not coding or deploying pipelines, I’m exploring real-world use cases, writing tech notes, and contributing to the AWS and developer community. I believe learning never stops — and I’m just getting started.
+            </p>
+        </p>
+
+        <div class='my-10'>
+            <p style="font-family: Poppins-Bold" class='text-4xl font-extrabold py-5 text-center md:text-start'>Skills</p>
+            {% comment %} <p class='text-2xl font-bold grid place-items-center mb-8'>My Skills</p> {% endcomment %}
+            <div class='grid grid-cols-1 md:grid-cols-2 md:space-x-4 lg:space-x-10'>
+                <div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">AWS</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="aws bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full"></div>
+                        </div>  
+                    </div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">Terraform</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="terraform bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">Docker</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="docker bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                </div>
+                <div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">Vagrant</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="vagrant bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">Kubernetes</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="k8 bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                
+                <div class='my-3'>
+                        <p class="text-base font-medium my-3">Jenkins</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="jenkins bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+            </div>
+                <div class='my-3'>
+                        <p class="text-base font-medium my-3">Gitlab CI</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="gitlab bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                <div class='my-3'>
+                        <p class="text-base font-medium my-3">Ansible</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="ansible bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                <div class='my-3'>
+                       <p class="text-base font-medium my-3">Python</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="python bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                <div class='my-3'>
+                        <p class="text-base font-medium my-3">Bash Scripting</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="bash bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                
+                <div class='my-3'>
+                        <p class="text-base font-medium my-3">CloudWatch</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="cloudwatch bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                <div class='my-3'>
+                        <p class="text-base font-medium my-3">MySQL</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="mysql bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+<style>
+    .progress-bar {
+        background-color: #4b5563; /* fallback for bg-gray-700 */
+        border-radius: 9999px;
+        height: 0.625rem; /* 2.5 */
+        overflow: hidden;
+    }
+
+    .aws,
+    .terraform,
+    .docker,
+    .vagrant,
+    .k8,
+    .jenkins,
+    .gitlab,
+    .ansible,
+    .python,
+    .bash,
+    .cloudwatch,
+    .mysql
+            {
+        background-image: linear-gradient(to right, #67e8f9, #3b82f6); /* cyan to blue */
+        height: 100%;
+        border-radius: 9999px;
+        width: 0%; /* Start from 0% for JS animation */
+    }
+</style>
+
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    function animateSkillBar(selector, targetPercent, speed = 10) {
+        let progress = 0;
+        const increment = 1;
+        const bar = document.querySelector(selector);
+        const interval = setInterval(() => {
+            progress += increment;
+            bar.style.width = progress + "%";
+            if (progress >= targetPercent) {
+                clearInterval(interval);
+            }
+        }, speed);
+    }
+
+    animateSkillBar(".aws", 95);
+    animateSkillBar(".terraform", 85);
+    animateSkillBar(".docker", 70);
+    animateSkillBar(".vagrant", 90);
+    animateSkillBar(".k8", 80);
+    animateSkillBar(".jenkins", 80);
+    animateSkillBar(".gitlab", 95);
+    animateSkillBar(".ansible", 85);
+    animateSkillBar(".python", 70);
+    animateSkillBar(".bash", 90);
+    animateSkillBar(".cloudwatch", 80);
+    animateSkillBar(".mysql", 80);
+       
+
+
+});
+</script>
+
+</div>
+
+{% endblock %}
