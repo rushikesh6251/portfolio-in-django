@@ -41,7 +41,7 @@ This project – **Django Tailwind Blog** – is my **developer portfolio and bl
 
 \`\`\`bash
 # Clone repository
-git clone https://github.com/Rushikesh-makes/django-tailwind-blog.git
+git clone https://github.com/rushikesh6251/portfolio-in-django.git
 
 # Navigate to project
 cd django-tailwind-blog
