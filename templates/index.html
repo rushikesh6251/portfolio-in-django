@@ -71,10 +71,62 @@
             </div>
         {% endfor %}
     </div>
-    <div class='flex justify-center'>
+    {% comment %} <div class='flex justify-center'>
         <a href='/blog' class=''><button class='bg-gray-800 p-2 px-4 rounded-[6px] hover:bg-blue-600 outline hover:outline-none outline-blue-600 transition delay-75 ease-in-out my-3'>Load more <i class="bi bi-arrow-clockwise font-extrabold"></i></button></a>
-    </div>
+    </div> {% endcomment %}
 </div>
+
+
+<!-- About Me Section -->
+<section id="about" class="bg-gray-900 text-white px-6 md:px-20 lg:px-32 xl:px-60 py-10">
+    <h2 style="font-family: Poppins-Bold" class="text-3xl md:text-4xl font-extrabold text-center mb-8">About Me</h2>
+    <div class="prose prose-invert max-w-none mb-6 text-center">
+        <p class='text-justify'>
+
+            👋 Hi there!<br><br>
+
+            <p>
+                I’m <strong>Rushikesh</strong>, a dedicated MCA student and aspiring <strong>DevOps Engineer</strong> with a solid foundation in Python, Cloud, and Automation. I'm currently building a portfolio of impactful tech projects while mastering tools like <strong>Jenkins, Docker, SonarQube, and Nexus</strong>.
+            </p><br>
+
+            <p>
+                My journey in tech began after my schooling in 2021. Since then, I’ve been obsessed with making things work smarter — whether it’s coding Python-based automation scripts, building full-stack applications with <strong>Django</strong>, or setting up complete CI/CD pipelines using <strong>Jenkins</strong>.
+            </p><br>
+        <a href="/about">
+            <button class="mt-4 bg-blue-600 px-6 py-2 rounded-md text-white font-semibold hover:bg-blue-700 transition">
+                Load more <i class="bi bi-arrow-right"></i>
+            </button>
+        </a>
+    </div>
+    <h3 class="text-2xl font-bold mb-4 text-center">Skills</h3>
+    <div class="flex flex-wrap justify-center gap-4">
+        <a href="/about#skills">
+            <span class="cursor-pointer bg-gray-800 px-4 py-2 rounded-md text-cyan-300 font-mono text-sm hover:bg-cyan-900 transition">Python</span>
+        </a>
+        <a href="/about#skills">
+            <span class="cursor-pointer bg-gray-800 px-4 py-2 rounded-md text-cyan-300 font-mono text-sm hover:bg-cyan-900 transition">Django</span>
+        </a>
+        <a href="/about#skills">
+            <span class="cursor-pointer bg-gray-800 px-4 py-2 rounded-md text-cyan-300 font-mono text-sm hover:bg-cyan-900 transition">AWS</span>
+        </a>
+        <a href="/about#skills">
+            <span class="cursor-pointer bg-gray-800 px-4 py-2 rounded-md text-cyan-300 font-mono text-sm hover:bg-cyan-900 transition">Docker</span>
+        </a>
+        <a href="/about#skills">
+            <span class="cursor-pointer bg-gray-800 px-4 py-2 rounded-md text-cyan-300 font-mono text-sm hover:bg-cyan-900 transition">Kubernetes</span>
+        </a>
+        <a href="/about#skills">
+            <span class="cursor-pointer bg-gray-800 px-4 py-2 rounded-md text-cyan-300 font-mono text-sm hover:bg-cyan-900 transition">CI/CD</span>
+        </a>
+        <a href="/about#skills">
+            <span class="cursor-pointer bg-gray-800 px-4 py-2 rounded-md text-cyan-300 font-mono text-sm hover:bg-cyan-900 transition">Linux</span>
+        </a>
+        <a href="/about#skills">
+            <span class="cursor-pointer bg-gray-800 px-4 py-2 rounded-md text-cyan-300 font-mono text-sm hover:bg-cyan-900 transition">Terraform</span>
+        </a>
+    </div>
+</section>
+
 
 <!-- tsParticles Script -->
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.3/tsparticles.bundle.min.js"></script>
